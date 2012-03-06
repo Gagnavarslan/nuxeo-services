@@ -22,6 +22,7 @@ package org.nuxeo.ecm.platform.convert.ooomanager;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.nuxeo.common.xmap.annotation.XNode;
 import org.nuxeo.common.xmap.annotation.XNodeList;
 import org.nuxeo.common.xmap.annotation.XObject;
 
@@ -33,6 +34,9 @@ public class OOoManagerDescriptor {
 
     @XNodeList(value = "pipeNames/pipeName", type = ArrayList.class, componentType = String.class)
     public List<String> pipeNames;
+    
+    @XNode("managerBuilder")
+    public Class<?> managerBuilder;
 
     public int[] getPortNumbers() {
         if (portNumbers != null) {
@@ -56,4 +60,7 @@ public class OOoManagerDescriptor {
         }
     }
 
+    public Class<?> getManagerBuilder() {
+        return managerBuilder;
+    }
 }

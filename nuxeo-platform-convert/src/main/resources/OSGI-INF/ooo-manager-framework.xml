@@ -6,6 +6,7 @@
   <documentation>
     OOoManagerService handle the OpenOffice server pool.
     @author Laurent Doguin (ldoguin@nuxeo.com)
+    @author Árni Hermann Reynisson (arni@gagnavarslan.is)
   </documentation>
 
   <service>
@@ -20,6 +21,8 @@
 	into account.
 	<code>
       <OOoManager>
+        <managerBuilder>org.nuxeo.ecm.platform.convert.ooomanager.OOoDefaultManagerBuilder</managerBuilder>
+
         <portNumbers>
           <portNumber>2003</portNumber>
           <portNumber>2004</portNumber>
@@ -35,6 +38,7 @@
       </OOoManager>
 	</code>
 	@author Laurent Doguin (ldoguin@nuxeo.com)
+    @author Árni Hermann Reynisson (arni@gagnavarslan.is)
   </documentation>
     <object
       class="org.nuxeo.ecm.platform.convert.ooomanager.OOoManagerDescriptor" />
